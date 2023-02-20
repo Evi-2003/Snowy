@@ -60,7 +60,7 @@ function bereidOmgevingVoor(){
         radioSpeler();
         naamHolder.innerHTML = naamPinguin;
         veranderAchtergrond();
-        pinguinAfbeelding.src = '/images/pinguin_start.png';
+        pinguinAfbeelding.src = 'images/pinguin_start.png';
         welkomTekst.classList.add('hide');
         naamHolder.classList.remove('hide');
         omgevingHolder.classList.remove('hide');
@@ -78,7 +78,7 @@ function bereidOmgevingVoor(){
 }
 
 // Radio array / Houdt alle muziek bestanden vast 
-var muziekBestandenArray = new Array('/audio/sand_castle.mp3', '/audio/ocean_man.mp3', 'audio/snack_time.mp3');
+var muziekBestandenArray = new Array('audio/sand_castle.mp3', 'audio/ocean_man.mp3', 'audio/snack_time.mp3');
 var nummerTitels = new Array('Sand Castle', 'Ocean Man', 'Snack Time');
 var radio = new Audio();
 function radioSpeler(){
