@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Snowy</title>
+</head>
+<body>
+    <header>
+        <h3 class="pinguinName hide">Naam</h3>
+        <h3 class="omgevingName hide">Omgeving</h3>
+        <a class="radioSpeler hide">Radio</a>
+        <a class="toDo hide">To-do list</a>
+        <a class="hulp hide">?</a>
+    </header>
+    <main>
+        <a class="navOmgeving1 hide">&lt;</a>
+        <div>
+            <h1 class="welkomTekst">Welkom! Hoe noem je jouw pinguin?</h1>
+            <section>
+                <form class="form_krijg_naam">
+                    <input type="text" id="naamInput" placeholder="Snowy"></input>
+                    <input type="submit"></input>
+                </form>
+            </section>
+            <img src="images/pinguin_welkom.png" alt="Pinguin die je verwelkomt">
+        </div>
+        <div class="radioWeergave hide">
+            <h1>Nummer</h1>
+            <div>
+                <a><img src="images/volgende liedje.svg" alt="Vorige liedje"></a>
+                <a><img src="images/pauze.svg"></a>
+                <a><img src="images/vorige_liedje.svg" alt="Volgende liedje"></a>
+            </div>
+            <p>Hierna:</p>
+            <ol> </ol>
+        </div>
+        <div class="to-do hide">
+            <h1>To-do</h1>
+            <ul>
+                <li><input type="checkbox">Drink 5 glazen water</li>
+                <li><input type="checkbox">Eet 2 visjes</li>
+                <li><input type="checkbox">Ga onder water</li>
+            </ul>
+        </div>
+        <a class="navOmgeving2 hide">&gt;</a>
+    </main>
+    <footer class="hide">
+        <div class="drinken">
+            <img src="images/water.svg">
+        </div>
+        <p>|</p>
+        <div class="eten">
+            <img src="images/visje.svg">
+        </div>
+        <p>|</p>
+        <div class="speeltjes">
+            <img src="images/bal.svg">
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
