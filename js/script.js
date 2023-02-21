@@ -18,12 +18,23 @@ var huidigeNummer = 0;
 const pauze = document.querySelector('.radioWeergave div a:nth-of-type(2)');
 const volgendeNummer = document.querySelector('.radioWeergave div a:nth-of-type(3)');
 const vorigeNummerKnop = document.querySelector('.radioWeergave div a:nth-of-type(1)');
-
+var levenBar = document.querySelector('.levenBar div');
+var dorstBar = document.querySelector('.dorstBar div');
+var etenBar = document.querySelector('.etenBar div');
+var barImages = document.querySelectorAll('.barImg');
+var aantal = 1;
+var barDefault = document.querySelectorAll('.bar');
+barDefault.forEach(element => {
+    element.style.width = '1em';
+});
 // Zodra op de knop verder wordt gedrukt, wordt deze functie direct uitgevoerd om de naam op te slaan
 naamForm.addEventListener('submit', button => {
     button.preventDefault();
     naamPinguin = document.querySelector('#naamInput').value;
     console.log(naamPinguin);
+    barVullen(levenBar, 1);
+    barVullen(etenBar, 1);
+    barVullen(dorstBar, 1);
     if(naamPinguin == ""){
         welkomTekst.innerHTML = 'De pinguin heeft nog geen naam!';
         return
@@ -69,6 +80,15 @@ function bereidOmgevingVoor(){
         toDoKnop.classList.remove('hide');    
         navOmgevingRight.classList.remove('hide');
         hulpKnop.classList.remove('hide');
+        levenBar.classList.remove('hide');
+        dorstBar.classList.remove('hide');
+        etenBar.classList.remove('hide');
+        barImages.forEach(element => {
+            element.classList.remove('hide');
+        });
+        document.querySelectorAll('.bars').forEach(element => {
+            element.classList.remove('hide');
+        });
         document.querySelector('footer').classList.remove('hide');
         navOmgevingLeft.addEventListener('click', veranderAchtergrond);
         navOmgevingRight.addEventListener('click', veranderAchtergrond);
@@ -128,3 +148,19 @@ toDoKnop.addEventListener('click', function(){
         toDoList.classList.add('hide');
     }
 });
+
+
+function barVullen(bar, hoeveelheid){
+    aantal += hoeveelheid;
+    console.log(bar);
+    console.log(aantal);
+    if(aantal < 10){
+        console.log('test');
+        bar.style.width = aantal + 'em';
+    } else{
+        bar.style.width = 10 + 'em';
+        bar.style.borderTopRightRadius = '0.5em';
+        bar.style.borderBottomRightRadius = '0.5em';
+    }
+    console.log(bar); 
+}

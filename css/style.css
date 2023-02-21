@@ -91,7 +91,7 @@ button{
     box-shadow: 2px 2px black;
 }
 main div{
-    display: inline-grid;
+    display: contents;
     text-align: center;
     justify-items: center;
 }
@@ -103,11 +103,11 @@ div img{
 
 
 .buiten{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url("images/buiten.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url("../images/buiten.jpg");
     background-size: cover;
 }
 .onderwater{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url("images/water.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url("../images/water.jpeg");
     background-size: cover;
 }
 
@@ -129,6 +129,7 @@ div img{
 }
 
 .radioWeergave,.to-do{
+    display: block;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -161,6 +162,7 @@ div img{
 
 form{
     display: flex;
+    justify-content: center;
 }
 form input:nth-of-type(1){
     width: 25em;
@@ -183,6 +185,35 @@ form input{
 }
 .to-do ul li input{width: fit-content;}
 
+.bars{
+    margin: 0.5em;
+    width: 10em;
+    height: 2.2em;
+    background-color: white;
+    border-radius: 0.5em;
+    background-color: white;
+    display: inline-block;
+}
+.levenBar div{
+    background-color: #2087ec;
+}
+.etenBar div{
+    background-color: #59aae2;
+}
+.dorstBar div{
+    background-color: #a4d0ff;
+}
+.barImg{
+    width: 4em;
+    height: 2em;
+    margin: 0.5em;
+}
 
-
+.bar{
+    height: 2.2em;
+    display: block;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    left: 0;
+}
 .hide{display: none;}
