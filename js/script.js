@@ -22,6 +22,9 @@ var levenBar = document.querySelector('.levenBar div');
 var dorstBar = document.querySelector('.dorstBar div');
 var etenBar = document.querySelector('.etenBar div');
 var barImages = document.querySelectorAll('.barImg');
+var drinken = document.querySelector('.drinken');
+var eten = document.querySelector('.eten img');
+var speeltjes = document.querySelector('.speeltjes img');
 var aantal = 1;
 var barDefault = document.querySelectorAll('.bar');
 barDefault.forEach(element => {
@@ -32,9 +35,6 @@ naamForm.addEventListener('submit', button => {
     button.preventDefault();
     naamPinguin = document.querySelector('#naamInput').value;
     console.log(naamPinguin);
-    barVullen(levenBar, 1);
-    barVullen(etenBar, 1);
-    barVullen(dorstBar, 1);
     if(naamPinguin == ""){
         welkomTekst.innerHTML = 'De pinguin heeft nog geen naam!';
         return
@@ -83,12 +83,22 @@ function bereidOmgevingVoor(){
         levenBar.classList.remove('hide');
         dorstBar.classList.remove('hide');
         etenBar.classList.remove('hide');
+        drinken.addEventListener('click', function(){
+            barVullen(dorstBar, 1);
+        });
+        eten.addEventListener('click', function(){
+            barVullen(etenBar, 1);
+        });
+        speeltjes.addEventListener('click', function(){
+            barVullen(levenBar, 1);
+        });
         barImages.forEach(element => {
             element.classList.remove('hide');
         });
         document.querySelectorAll('.bars').forEach(element => {
             element.classList.remove('hide');
-        });
+        }
+        );
         document.querySelector('footer').classList.remove('hide');
         navOmgevingLeft.addEventListener('click', veranderAchtergrond);
         navOmgevingRight.addEventListener('click', veranderAchtergrond);
