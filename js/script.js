@@ -83,15 +83,6 @@ function bereidOmgevingVoor(){
         levenBar.classList.remove('hide');
         dorstBar.classList.remove('hide');
         etenBar.classList.remove('hide');
-        drinken.addEventListener('click', function(){
-            barVullen(dorstBar, 1);
-        });
-        eten.addEventListener('click', function(){
-            barVullen(etenBar, 1);
-        });
-        speeltjes.addEventListener('click', function(){
-            barVullen(levenBar, 1);
-        });
         barImages.forEach(element => {
             element.classList.remove('hide');
         });
@@ -159,6 +150,27 @@ toDoKnop.addEventListener('click', function(){
     }
 });
 
+drinken.addEventListener('click', function(){
+    barVullen(dorstBar, 1);
+    barImages[2].style.animation= "3s ease-in pulse";
+    setTimeout(() => {
+        barImages[2].style.animation = "";
+    }, 3000);
+});
+eten.addEventListener('click', function(){
+    barVullen(etenBar, 1);
+    barImages[1].style.animation= "3s ease-in pulse";
+    setTimeout(() => {
+        barImages[1].style.animation = "";
+    }, 3000);
+});
+speeltjes.addEventListener('click', function(){
+    barVullen(levenBar, 1);
+    barImages[0].style.animation= "3s ease-in pulse";
+    setTimeout(() => {
+        barImages[0].style.animation = "";
+    }, 3000);
+});
 
 function barVullen(bar, hoeveelheid){
     aantal += hoeveelheid;

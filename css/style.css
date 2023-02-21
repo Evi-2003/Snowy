@@ -217,3 +217,17 @@ form input{
     left: 0;
 }
 .hide{display: none;}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
